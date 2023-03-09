@@ -1,0 +1,11 @@
+{
+        "files.associations": {
+            "cmath": "c",
+            "random": "cpp",
+            "atomic": "cpp",
+            "utility": "cpp",
+            "iostream": "cpp"
+        },
+        "C_Cpp.errorSquiggles": "enabled",
+        "cmake.configureOnOpen": true
+    }

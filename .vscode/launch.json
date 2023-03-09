@@ -1,0 +1,64 @@
+{
+        // 使用 IntelliSense 了解相关属性。 
+        // 悬停以查看现有属性的描述。
+        // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+        
+            
+            {
+                "name": "C++ Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceRoot}/build/echoLoose_exe",
+                "args": [
+                    // "Rtklib_Pos_exe",
+                    // "rtcm_data/acc0923.log",
+                    // "rtcm_data/imu21510.rtcm",
+    
+                    "-r","rtcm3",
+                    "-v","3.04",
+                    "-f","7",
+                    "-od","-os",
+                    "build/NAVM",
+    
+                    //"-ts","2023/02/21 00:00:00",
+                   // "-te","2023/02/21 23:59:59",
+                    //"-tr","2023/02/21 00:00:00",
+                    
+                    // "-ifile",
+                  //  "rtcm2obs_bat/acc1052b.rtcm"
+                ],
+                "stopAtEntry": false,
+                "cwd": "${workspaceRoot}",
+                "environment": [],
+                "externalConsole": false,
+                "preLaunchTask": "convbin_exe",
+                "linux": {
+                    "MIMode": "gdb"
+                },
+                "osx": {
+                    "MIMode": "lldb"
+                },
+                "windows": {
+                    "MIMode": "gdb"
+                }
+            },
+            {
+                "name": "C++ Attach",
+                "type": "cppdbg",
+                "request": "attach",
+                "program": "${workspaceRoot}/build/convbin_exe",
+                "processId": "${command.pickProcess}",
+                "linux": {
+                    "MIMode": "gdb"
+                },
+                "osx": {
+                    "MIMode": "lldb"
+                },
+                "windows": {
+                    "MIMode": "gdb"
+                }
+            }
+        ]
+    }
